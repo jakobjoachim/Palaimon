@@ -1,0 +1,47 @@
+Host client1
+	HostName 172.24.0.3
+	User root
+
+Host server1
+	HostName 172.21.0.5
+	User root
+
+Host world2
+	HostName 172.23.0.3
+	User root
+
+Host backend2
+	HostName 172.22.0.5
+	User root
+
+Host server2
+	HostName 172.21.0.3
+	User root
+
+Host backend3 
+	HostName 172.22.0.3
+	User root
+
+Host fwworld
+	HostName 172.21.0.4
+	User root
+
+Host server3
+	HostName 172.21.0.2
+	User root
+
+Host fwintern
+	HostName 172.24.0.4
+	User root
+
+Host backend1
+	HostName 172.22.0.2
+	User root
+
+Host world1
+	HostName 172.23.0.2
+	User root
+
+Host client3
+	HostName 172.24.0.2
+	User root
