@@ -1,0 +1,42 @@
+Interface eth0:
+24: Clients1,3
+21: Servers1-3
+22: Backend1-3
+23: world1,2
+
+21(eth0)<->23(eth1) fwworld
+24(eth2)<->21(eth1)<->22(eth0) fwintern
+172.24.0.1 ssh-hop
+
+nmap -v -A 172.24.0.1/24:
+Discovered open port 80/tcp on 172.24.0.1
+Discovered open port 22/tcp on 172.24.0.2
+Discovered open port 22/tcp on 172.24.0.4
+Discovered open port 22/tcp on 172.24.0.1
+Discovered open port 443/tcp on 172.24.0.1
+Discovered open port 22/tcp on 172.24.0.3
+
+nmap -v 172.23.0.1/24
+Discovered open port 22/tcp on 172.23.0.3
+Discovered open port 22/tcp on 172.23.0.4
+Discovered open port 22/tcp on 172.23.0.1
+Discovered open port 80/tcp on 172.23.0.1
+Discovered open port 443/tcp on 172.23.0.1
+Discovered open port 22/tcp on 172.23.0.2
+
+nmap -v 172.22.0.1/24
+Discovered open port 22/tcp on 172.22.0.3
+Discovered open port 22/tcp on 172.22.0.4
+Discovered open port 80/tcp on 172.22.0.1
+Discovered open port 22/tcp on 172.22.0.5
+Discovered open port 22/tcp on 172.22.0.1
+Discovered open port 443/tcp on 172.22.0.1
+
+nmap -v 172.21.0.1/24
+Discovered open port 22/tcp on 172.21.0.2
+Discovered open port 443/tcp on 172.21.0.1
+Discovered open port 22/tcp on 172.21.0.4
+Discovered open port 22/tcp on 172.21.0.3
+Discovered open port 22/tcp on 172.21.0.6
+Discovered open port 80/tcp on 172.21.0.1
+Discovered open port 22/tcp on 172.21.0.1
