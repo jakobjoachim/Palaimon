@@ -1,8 +1,8 @@
-Firmen Webserver
-Webserver im „Web“
-SMTP
-Imap
-Print-Server
-Interner DNS
-Datenbank
-NTP
+Firmen Webserver   -> Server2 (172.21.0.3) Apache2
+Webserver im „Web“ -> Server1 (172.21.0.5) Apache2
+SMTP               -> Server3?
+Imap               -> Client3?
+Print-Server       -> Backend2?
+Interner DNS       -> Client3?
+Datenbank          -> Backend1 (172.22.0.2) MySQL
+NTP                -> ??Backend??
