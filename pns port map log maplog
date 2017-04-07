@@ -40,3 +40,14 @@ Discovered open port 22/tcp on 172.21.0.3
 Discovered open port 22/tcp on 172.21.0.6
 Discovered open port 80/tcp on 172.21.0.1
 Discovered open port 22/tcp on 172.21.0.1
+
+Route:
+route add -net 172.24.0.0. netmask 255.255.255.0 gw 172.22.0.4 (Backend zu Client)
+ip route add 172.22.0.0/24 via 172.24.0.4 (Client zu Backend)
+
+Trace von Client1 zum Backend über FWIntern(172.24.0.4):
+traceroute to 172.22.0.2 (172.22.0.2), 64 hops max
+  1   172.24.0.4  0.009ms  0.005ms  0.004ms
+  2   172.22.0.2  0.007ms  0.004ms  0.004ms
+
+  
