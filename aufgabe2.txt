@@ -6,3 +6,9 @@ Print-Server       -> Backend3 (172.22.0.3) CUPS
 Interner DNS       -> Backend2 (172.22.0.5) bind9
 Datenbank          -> Backend1 (172.22.0.2) MySQL
 NTP                -> Backend1 (172.22.0.2) NTP
+
+
+FireWall
+FWWorld:
+iptables -A FORWARD -i eth1 -o eth0 -p tcp --syn --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+iptables -t nat -A PREROUTING -i eth1 -p tcp --dport 80 -j DNAT --to-destination 172.21.0.3
