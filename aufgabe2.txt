@@ -1,8 +1,8 @@
 Firmen Webserver   -> Server2 (172.21.0.3) Apache2
-Webserver im „Web“ -> Server1 (172.21.0.5) Apache2
-SMTP               -> Server3?
-Imap               -> Client3?
-Print-Server       -> Backend2?
-Interner DNS       -> Client3?
+Webserver im „Web“ -> World1 (172.23.0.2) Apache2
+SMTP               -> Server1 (172.21.0.5) postfix
+Imap               -> Server1 (172.21.0.5) dovecot-imapd
+Print-Server       -> Backend3 (172.22.0.3) CUPS
+Interner DNS       -> Backend2 (172.22.0.5) bind9
 Datenbank          -> Backend1 (172.22.0.2) MySQL
-NTP                -> ??Backend??
+NTP                -> Backend1 (172.22.0.2) NTP
