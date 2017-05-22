@@ -1,0 +1,7 @@
+
+FWWORLD:
+iptables -A OUTPUT -p tcp --dport ssh -j ACCEPT
+iptables -P OUTPUT DROP
+
+iptables -A INPUT -p tcp --dport ssh -j ACCEPT
+iptables -P INPUT DROP
