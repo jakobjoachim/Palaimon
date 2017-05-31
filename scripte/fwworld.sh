@@ -6,7 +6,7 @@ iptables -A FORWARD -i eth1 -o eth0 -p tcp --syn --dport 443 -m conntrack --ctst
 iptables -A FORWARD -i eth1 -o eth0 -p tcp --syn --dport 465 -m conntrack --ctstate NEW -j ACCEPT # allow new smtps connections from the servers to the world
 
 iptables -A FORWARD -s 172.21.0.2 -o eth1 -p tcp --syn --dport 80 -m conntrack --ctstate NEW -j ACCEPT # allow new http connections from the world to our server
-iptables -A FORWARD -s 172.21.0.5 -o eth1 -p tcp --syn --dport 25 -m conntrack --ctstate NEW -j ACCEPT # allow new smtp connections from the world to our server
+iptables -A FORWARD -s 172.21.0.5 -o eth1 -p tcp --syn --dport 465 -m conntrack --ctstate NEW -j ACCEPT # allow new smtp connections from the world to our server
 
 iptables -A FORWARD -i eth1 -o eth0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT # accept all forwading established connections from eth1 to eth0
 iptables -A FORWARD -i eth0 -o eth1 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT # accept all forwading established connections from eth0 to eth1
