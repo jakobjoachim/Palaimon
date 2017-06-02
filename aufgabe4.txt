@@ -1,0 +1,18 @@
+Wenn für Administratoren aus dem Internet ein SSH-Zugriff möglich sein soll,
+aber nur ein einziges Ziel erreicht werden darf, auf welches System (den sogenannten Jump-Host) würden Sie diesen gewähren?
+
+Auf einem Server. Warum? Die Server sind am besten von den Clients und dem Backend abgeschirmt, und somit sind die weitestgehend sicher.
+
+Welches Zugangsverfahren (Public Key oder Passwort) würden Sie fordern?
+
+Public Key, da dies sicherer ist, als Passwörter. BruteForce wird schwieriger
+
+Welche Systeme dürfen (gemäß Ihrer Entscheidung) die Administratoren
+ausgehend von dem ausgewählten System dann erreichen?
+
+Client und Server. Nicht Backend.
+
+Wenn Sie nicht den Zugriff auf alle System von dem Jump-Host aus zulassen, wie stellen Sie dann deren Administration sicher?
+
+Backend darf nur Lokal verwaltet werden. Die Datenbank einer Firma ist ein hohes Gutes, daher sollte man es einem Angreifer schwer machen,
+auf die Verwaltung zuzugreifen.
