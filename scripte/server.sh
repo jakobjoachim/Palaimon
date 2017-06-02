@@ -25,3 +25,4 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT # allow new incoming naughty http
 iptables -A INPUT -p tcp --dport 3128 -j ACCEPT # allow new incoming proxy connections
 iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT # allow new outgoing secure http
 iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT # allow new outgoing naughty http
+iptables -A INPUT -p tcp --dport 12345 -j ACCEPT # allow new incoming proxy connections

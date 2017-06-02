@@ -19,3 +19,5 @@ iptables -A INPUT -p tcp --dport ssh -j ACCEPT # allow new incoming ssh connecti
 iptables -P INPUT DROP # dont allow any other incoming connections
 iptables -A OUTPUT -p tcp --dport ssh -j ACCEPT # allow new outgoing ssh connections
 iptables -P OUTPUT DROP # dont allow any other outgoing connections
+
+iptables -A FORWARD -i eth1 -d 172.21.0.2 -p tcp --syn --dport 12345 -m conntrack --ctstate NEW -j ACCEPT # allow new tcp connections from the world to the proxy server over port 12345
