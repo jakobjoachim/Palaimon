@@ -1,0 +1,28 @@
+Packet screens eins der wichtigen themen
+Wichtige Themen:
+Least Priviliges
+defence in depth und welche massnamhene dazu
+archi komponenten wissen was es gibt und was die koennen wo die hingehoeren
+DMZ aufbau ganz ganz wichtig
+schutzziele extrem wichtig
+
+kontrolle von firewalls eher unwichtiger (wissen wie man es machen koennte)
+
+wenn er die klausur machen wuerde wuerden wir ein bild bekommen vin netzwerk wir duerfen neue verbbindungen ziehen, welche entfernen und  services und komponenten setzen. Macht es sicher so dass es immer noch funktioniert.
+liste von frewall regeln daran sagen was erlaubt ist und was nicht.
+netzwerk map ohne firewalls mit den ip table rules, daran sagen was erlaubt ist und was nicht.
+erklaeren sie wie eine ddos refelction attack fnktioniert, machen sie den unterschied klar zwischen amplification und reflection attack
+
+
+HIDS - nur wissen gibt es, ueberwacht einen host und was macht ein ids generell sicherhheit in der tiefe konkurrenz ist firewall
+prrinciple of the weakest link - ein system ist nur so gut wie das schlechteste glied
+principle f the least priviliges - nur rechte fuer was man wirklich braucht
+Firwall - perimeter sicherheit
+Honeypot - 3 variantionen, low interactive nur horchen, medium interactive, ein protokoll und schlagen arlarm wenn jemand darauf zugreift, high interactive ist ein ganzes system. low einfacher zu ueberwachen aber du weisst nicht was er machen wollte was er angreifen will und wo er hin will. Bei medium weiss man wenigstens mit welchen credentials er sich einloggen will. Unwahrscheinlich das die genaue unterscheidung dran kommt. Man will feststellen das jemand im netzwerk ist wo er nicht hingehoert.
+packet screens - passive ftp schlecht weil viele verbindungen offens
+stateful inspection - wir lassen nur bestimmte connections zu: new, established, related - uebersichtlicher da ports fuer antworten nicht einzeln aufgezeahlt werden muessen
+53 dns, 80 http, 443 https, 22 ssh
+proxy kann als intelligente firewall arbeiten, er ergaenzt die firewall
+email ist in einem format und smtp imap usw sind protokolle zum verschicken davon.
+smtp ist postbote, es geht immer weiter bis es bei imap server ankommt.
+imap ist das was benutzt wird um sachen anzuzeigen. imap muss nie nach aussen telefonieren: nach aussen nur smtp(25)
